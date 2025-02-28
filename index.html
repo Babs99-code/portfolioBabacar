@@ -5,35 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio SIG</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <h1>Bienvenue sur mon portfolio SIG</h1>
-        <nav>
-            <ul>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="entetecontainer">
+            <div class="profile-container">
+                <h1>Ton Nom</h1>
+            </div>
+            <nav class="buttons">
+                <a href="https://www.linkedin.com/in/tonprofil" target="_blank" class="button">LinkedIn</a>
+                <a href="cv.pdf" target="_blank" class="button">CV</a>
+                <a href="mailto:ton-email@example.com" class="button">Me contacter</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="cv">
-        <h2>Mon CV</h2>
-        <p><a href="CV_ SARR_Babacar.pdf" target="_blank">Téléchargez CV_ SARR_Babacar.pdf</a></p>
-    </section>
+    <!-- INTRODUCTION -->
+    <main>
+        <section class="intro">
+            <h2>Bienvenue sur mon portfolio !</h2>
+            <p>Je suis [Ton Nom], passionné par la géomatique et l’analyse spatiale. Découvrez mes projets ci-dessous.</p>
+        </section>
 
-    <section id="projects">
-        <h2>Mes Projets SIG</h2>
-        <img src="C:\Users\mamba\Desktop\L.Pro SIG-DAT\SIG et Cartographie\CC Reulier_Mathilde\Résultats\Densité de Haies CSNor.jpeg" alt="Densité de Haies CSNor.jpeg" width="300">
-        <img src="images/projet2.png" alt="Projet 2" width="300">
-    </section>
+        <!-- SELECTION DE CATEGORIES -->
+        <div class="tag-selection">
+            <p class="docs__tag docs__tag--grey">Tous mes travaux</p>
+            <p class="docs__tag docs__tag--grey">Cartographies</p>
+            <p class="docs__tag docs__tag--grey">Analyses SIG</p>
+        </div>
 
-    <section id="contact">
-        <h2>Me Contacter</h2>
-        <p>Email : <a href="mailto:ton-email@example.com">ton-email@example.com</a></p>
-        <p>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">Mon Profil</a></p>
-    </section>
+        <!-- GALERIE DES PROJETS -->
+        <div class="docs">
+            <img src="images/projet1.png" alt="Projet 1" class="project-img" onclick="openModal('images/projet1.png', 'Description du projet 1')">
+            <img src="images/projet2.png" alt="Projet 2" class="project-img" onclick="openModal('images/projet2.png', 'Description du projet 2')">
+            <img src="images/projet3.png" alt="Projet 3" class="project-img" onclick="openModal('images/projet3.png', 'Description du projet 3')">
+        </div>
+    </main>
+
+    <!-- MODAL D'AGRANDISSEMENT -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Document Image">
+            <p id="modalText" class="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
