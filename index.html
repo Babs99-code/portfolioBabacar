@@ -3,55 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio SIG</title>
+    <title>Portfolio de Babacar SARR</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- En-tête -->
     <header>
         <div class="entetecontainer">
             <div class="profile-container">
                 <h1>Babacar SARR</h1>
             </div>
             <nav class="buttons">
-                <a href="https://www.linkedin.com/in/tonprofil" target="_blank" class="button">LinkedIn</a>
-                <a href="CV_ SARR_Babacar.pdf" target="_blank" class="button">CV_ SARR_Babacar.pdf</a>
-                <a href="mailto:boubasarr47@.com" class="button">Me contacter</a>
+                <a href="CV_SARR_Babacar.pdf" target="_blank" class="button">📄 Mon CV</a>
+                <a href="mailto:boubasarr47@gmail.com" class="button">✉️ Me contacter</a>
             </nav>
         </div>
     </header>
 
-    <!-- INTRODUCTION -->
+    <!-- Introduction -->
     <main>
         <section class="intro">
-            <h2>Bienvenue sur mon portfolio !</h2>
-            <p>Je suis Babacar SARR, passionné par la géomatique et l’analyse spatiale. Découvrez mes projets ci-dessous.</p>
+            <h2>Bienvenue sur mon portfolio SIG !</h2>
+            <p>Je suis passionné par la cartographie et l'analyse spatiale. Découvrez ici mes projets en géomatique.</p>
         </section>
 
-        <!-- SELECTION DE CATEGORIES -->
-        <div class="tag-selection">
-            <p class="docs__tag docs__tag--grey">Tous mes travaux</p>
-            <p class="docs__tag docs__tag--grey">Cartographies</p>
-            <p class="docs__tag docs__tag--grey">Analyses SIG</p>
-        </div>
-
-        <!-- GALERIE DES PROJETS -->
-        <div class="docs">
-            <img src="Cartes densité HAIES EPCI14_2.jpeg" alt="Projet 1" class="Cartes densité HAIES EPCI14_2.jpeg" onclick="openModal('images/projet1.png', 'Description du projet 1')">
-            <img src="images/projet2.png" alt="Projet 2" class="project-img" onclick="openModal('images/projet2.png', 'Description du projet 2')">
-            <img src="images/projet3.png" alt="Projet 3" class="project-img" onclick="openModal('images/projet3.png', 'Description du projet 3')">
+        <!-- Galerie de projets -->
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/Cartes densité HAIES EPCI14_2.jpeg" alt="Densité de haies - EPCI14" onclick="openModal(this)">
+                <p>Densité de haies - EPCI14</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Densité de Haies CSNor.jpeg" alt="Densité de haies - CSNor" onclick="openModal(this)">
+                <p>Densité de haies - CSNor</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Evolution de l'occupation du sol.jpeg" alt="Évolution de l’occupation du sol" onclick="openModal(this)">
+                <p>Évolution de l’occupation du sol</p>
+            </div>
         </div>
     </main>
 
-    <!-- MODAL D'AGRANDISSEMENT -->
+    <!-- Modal pour afficher les images en grand -->
     <div class="modal" id="imageModal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="Document Image">
-            <p id="modalText" class="modal-text"></p>
+            <img id="modalImage" src="" alt="">
+            <p id="modalText"></p>
         </div>
     </div>
 
